@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthContex';
+import toast from 'react-hot-toast';
 
 const MyBooks = () => {
   const { user } = useContext(AuthContext);
@@ -13,6 +14,26 @@ const MyBooks = () => {
       .catch(error => console.log(error));
   }, [user]);
 
+  // Delete Book
+  const handleDelete = (id) => {
+    const confirmDlete = window.confirm("Are you sure?");
+    if (!confirmDlete) return;
+    fetch(`http://localhost:3000/books/${id}`, {
+      method: "DELETE"
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          setBooks(books.filter(book => book._id !== id));
+          toast.success("Book deleted successfully!");
+        }
+      })
+      .catch(error => {
+        toast.error("Error deleting book");
+        console.log(error)
+      })
+
+  }
 
 
   return (
@@ -38,7 +59,8 @@ const MyBooks = () => {
               <td className="border px-4 py-2">{book.rating}</td>
               <td className="border px-4 py-2">
                 <button className="btn btn-warning btn-sm mr-2">Update</button>
-                <button className="btn btn-error btn-sm">Delete</button>
+                <button onClick={() => handleDelete(book._id)}
+                  className="btn btn-error btn-sm">Delete</button>
               </td>
             </tr>
           ))}
