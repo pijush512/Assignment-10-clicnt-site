@@ -9,6 +9,7 @@ import MyBooks from '../Pages/MyBooks/MyBooks';
 import Login from '../Components/Login/Login';
 import Register from '../Components/Register/Register';
 import BookDitals from '../Components/BookDitals/BookDitals';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 
 
@@ -30,11 +31,15 @@ export const router = createBrowserRouter([
       },
       {
         path: '/addBooks',
-        Component: AddBooks,
+        element: <PrivateRoute>
+          <AddBooks></AddBooks>
+        </PrivateRoute>,
       },
       {
         path: '/myBooks',
-        Component: MyBooks,
+        element: <PrivateRoute>
+          <MyBooks></MyBooks>
+        </PrivateRoute>,
       },
       {
         path: '/login',
