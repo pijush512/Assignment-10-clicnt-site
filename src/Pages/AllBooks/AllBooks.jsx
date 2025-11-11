@@ -39,7 +39,7 @@ const AllBooks = () => {
               <td className="border px-4 py-2">{book.genre}</td>
               <td className="border px-4 py-2">{book.rating}</td>
               <td className="border px-4 py-2">
-                <Link to={`/bookDitals/${book._id}`} className="text-blue-600 underline">
+                <Link to={`/bookDitals/${book._id.toString()}`} className="text-blue-600 underline">
                   View Details
                 </Link>
               </td>
