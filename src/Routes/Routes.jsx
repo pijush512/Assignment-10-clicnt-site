@@ -8,6 +8,7 @@ import AddBooks from '../Pages/AddBooks/AddBooks';
 import MyBooks from '../Pages/MyBooks/MyBooks';
 import Login from '../Components/Login/Login';
 import Register from '../Components/Register/Register';
+import BookDitals from '../Components/BookDitals/BookDitals';
 
 
 
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path: '/register',
         Component: Register,
+      },
+      {
+        path: '/bookDitals/:id',
+        Component: BookDitals,
       },
 
 

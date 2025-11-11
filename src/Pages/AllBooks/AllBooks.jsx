@@ -1,9 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const AllBooks = () => {
+  const [books, setBooks] = useState([]);
+
+
+  useEffect(() => {
+    fetch('http://localhost:3000/books')
+      .then(res => res.json())
+      .then(data => {
+        setBooks(data);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }, [])
+
+
   return (
-    <div>
-      <h2>All Books </h2>
+    <div className="p-6">
+      <h1 className="text-3xl font-bold text-center mb-4">All Books</h1>
+
+      <table className="table-auto border w-full">
+        <thead className="bg-gray-200">
+          <tr>
+            <th className="border px-4 py-2">Book Name</th>
+            <th className="border px-4 py-2">Author</th>
+            <th className="border px-4 py-2">Genre</th>
+            <th className="border px-4 py-2">Rating</th>
+            <th className="border px-4 py-2">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {books.map((book) => (
+            <tr key={book._id}>
+              <td className="border px-4 py-2">{book.title}</td>
+              <td className="border px-4 py-2">{book.author}</td>
+              <td className="border px-4 py-2">{book.genre}</td>
+              <td className="border px-4 py-2">{book.rating}</td>
+              <td className="border px-4 py-2">
+                <Link to={`/bookDitals/${book._id}`} className="text-blue-600 underline">
+                  View Details
+                </Link>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
