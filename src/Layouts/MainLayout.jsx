@@ -9,7 +9,7 @@ const MainLayout = () => {
     <div>
       <header>
         <Navbar></Navbar>
-        <Banner></Banner>
+        {/* <Banner></Banner> */}
       </header>
       <main>
         <Outlet></Outlet>
