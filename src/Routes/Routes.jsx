@@ -10,6 +10,7 @@ import Login from '../Components/Login/Login';
 import Register from '../Components/Register/Register';
 import BookDitals from '../Components/BookDitals/BookDitals';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import UpdateBook from '../Components/UpdateBook/UpdateBook';
 
 
 
@@ -52,6 +53,10 @@ export const router = createBrowserRouter([
       {
         path: '/bookDitals/:id',
         Component: BookDitals,
+      },
+      {
+        path: '/updateBook/:id',
+        Component: UpdateBook,
       },
 
 

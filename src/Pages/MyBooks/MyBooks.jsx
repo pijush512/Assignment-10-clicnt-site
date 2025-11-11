@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthContex';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+
 
 const MyBooks = () => {
   const { user } = useContext(AuthContext);
   const [books, setBooks] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!user?.email) return;
@@ -38,6 +41,7 @@ const MyBooks = () => {
 
   return (
     <div className="p-6">
+      <Toaster />
       <h2 className="text-2xl font-bold mb-4">My Books</h2>
 
       <table className="table-auto border w-full">
@@ -58,7 +62,8 @@ const MyBooks = () => {
               <td className="border px-4 py-2">{book.genre}</td>
               <td className="border px-4 py-2">{book.rating}</td>
               <td className="border px-4 py-2">
-                <button className="btn btn-warning btn-sm mr-2">Update</button>
+                <button onClick={() => navigate(`/updateBook/${book._id}`)}
+                  className="btn btn-warning btn-sm mr-2">Update</button>
                 <button onClick={() => handleDelete(book._id)}
                   className="btn btn-error btn-sm">Delete</button>
               </td>

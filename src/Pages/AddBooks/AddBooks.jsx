@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../context/AuthContex';
-import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 
 const AddBooks = () => {
   const { user } = useContext(AuthContext);
@@ -62,6 +62,7 @@ const AddBooks = () => {
         <input type="text" name="coverImage" placeholder="Cover Image URL" value={formData.coverImage} onChange={handleChange} />
         <button type="submit" className="btn btn-primary mt-2">Add Book</button>
       </form>
+      <Toaster />
     </div>
   );
 };
