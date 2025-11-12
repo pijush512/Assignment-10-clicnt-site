@@ -18,7 +18,7 @@ const AllBooks = () => {
 
 
   return (
-    <div className="p-6">
+    <div className="p-6 w-11/12 mx-auto">
       <h1 className="text-3xl font-bold text-center mb-4">All Books</h1>
 
       <table className="table-auto border w-full">

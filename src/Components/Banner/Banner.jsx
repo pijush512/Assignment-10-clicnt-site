@@ -4,7 +4,7 @@ import './Banner.css'
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-[400px] overflow-hidden">
+    <div className="relative w-11/12 mx-auto h-[400px] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400 animate-gradient-x"></div>
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-4">
         <h1 className="text-5xl font-bold animate-pulse">Welcome to The Book Haven</h1>
@@ -24,7 +24,7 @@ const Banner = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

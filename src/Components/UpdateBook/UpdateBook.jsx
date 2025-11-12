@@ -60,12 +60,18 @@ const UpdateBook = () => {
       <Toaster />
       <h1 className="text-2xl font-bold mb-4">Update Book</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-        <input type="text" name="title" value={formData.title} onChange={handleChange} placeholder="Title" required />
-        <input type="text" name="author" value={formData.author} onChange={handleChange} placeholder="Author" required />
-        <input type="text" name="genre" value={formData.genre} onChange={handleChange} placeholder="Genre" required />
-        <input type="number" name="rating" value={formData.rating} onChange={handleChange} placeholder="Rating" min="0" max="5" step="0.1" required />
-        <textarea name="summary" value={formData.summary} onChange={handleChange} placeholder="Summary" required />
-        <input type="text" name="coverImage" value={formData.coverImage} onChange={handleChange} placeholder="Cover Image URL" />
+        <input className='border rounded-md py-2 px-2'
+          type="text" name="title" value={formData.title} onChange={handleChange} placeholder="Title" required />
+        <input className='border rounded-md py-2 px-2'
+          type="text" name="author" value={formData.author} onChange={handleChange} placeholder="Author" required />
+        <input className='border rounded-md py-2 px-2'
+          type="text" name="genre" value={formData.genre} onChange={handleChange} placeholder="Genre" required />
+        <input className='border rounded-md py-2 px-2'
+          type="number" name="rating" value={formData.rating} onChange={handleChange} placeholder="Rating" min="0" max="5" step="0.1" required />
+        <textarea className='border rounded-md py-2 px-2'
+          name="summary" value={formData.summary} onChange={handleChange} placeholder="Summary" required />
+        <input className='border rounded-md py-2 px-2'
+          type="text" name="coverImage" value={formData.coverImage} onChange={handleChange} placeholder="Cover Image URL" />
         <button type="submit" className="btn btn-primary mt-2">Update Book</button>
       </form>
     </div>

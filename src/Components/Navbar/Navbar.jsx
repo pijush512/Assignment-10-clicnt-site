@@ -29,7 +29,7 @@ const Navbar = () => {
   </>
   return (
     <div className='bg-[#687FE5]'>
-      <div className="navbar w-11/12 mx-auto ">
+      <div className="navbar w-11/12 mx-auto">
         <Toaster position="top-center" />
         <div className="navbar-start">
           <div className="dropdown">

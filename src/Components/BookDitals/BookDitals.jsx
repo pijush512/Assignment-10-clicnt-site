@@ -24,28 +24,24 @@ const BookDitals = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <button
-        className="mb-4 btn btn-sm btn-neutral"
-        onClick={() => navigate(-1)}
-      >
-        ← Back
-      </button>
-
       <div className="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-lg shadow">
         <img
           src={book.coverImage || 'https://via.placeholder.com/150'}
           alt={book.title}
-          className="w-full md:w-1/3 h-auto rounded-lg object-cover"
+          className="w-full md:w-1/3 h-60 rounded-lg object-cover"
         />
 
         <div className="md:w-2/3">
           <h1 className="text-3xl font-bold mb-2">{book.title}</h1>
-          <p className="text-gray-600 mb-2">Author: {book.author}</p>
-          <p className="text-gray-600 mb-2">Genre: {book.genre}</p>
-          <p className="text-gray-600 mb-2">Rating: {book.rating}</p>
-          <p className="text-gray-700 mt-4">{book.summary}</p>
+          <p className="text-gray-600 mb-2"><span className='font-bold'>Author: </span>{book.author}</p>
+          <p className="text-gray-600 mb-2"><span className='font-bold'>Genre:</span> {book.genre}</p>
+          <p className="text-gray-600 mb-2"><span className='font-bold'>Rating:</span> {book.rating}</p>
+          <p className="text-gray-700 mt-4 font-bold">{book.summary}</p>
         </div>
       </div>
+      <button className="mb-4 btn mt-5 btn-primary"
+        onClick={() => navigate(-1)}
+      > ← Back </button>
     </div>
   );
 };

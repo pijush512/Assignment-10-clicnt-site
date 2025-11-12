@@ -40,7 +40,7 @@ const MyBooks = () => {
 
 
   return (
-    <div className="p-6">
+    <div className="p-6 w-11/12 mx-auto">
       <Toaster />
       <h2 className="text-2xl font-bold mb-4">My Books</h2>
 
