@@ -1,16 +1,15 @@
-# React + Vite
+1. Website-er name: The Book Haven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. Live site URL: 
 
-Currently, two official plugins are available:
+3. At least 5 bullet points: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+        a. Users can view all books and latest additions.
 
-## React Compiler
+        b. Authenticated users can add, update, and delete their own books.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+        c. Responsive design for mobile, tablet, and desktop.
 
-## Expanding the ESLint configuration
+        d. Interactive hover animations on    book cards.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+        e. User authentication using Firebase.
