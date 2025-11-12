@@ -19,14 +19,12 @@ const Navbar = () => {
   };
 
   const links = <>
-    <div className="font-bold text-white flex gap-6">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/allBooks">All Books</NavLink>
-      <NavLink to="/addBooks">Add Books</NavLink>
-      <NavLink to="/myBooks">My Books</NavLink>
-
-    </div >
+    <NavLink to="/">Home</NavLink>
+    <NavLink to="/allBooks">All Books</NavLink>
+    <NavLink to="/addBooks">Add Books</NavLink>
+    <NavLink to="/myBooks">My Books</NavLink>
   </>
+
   return (
     <div className='bg-[#687FE5]'>
       <div className="navbar w-11/12 mx-auto">
@@ -43,12 +41,12 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost">
-            <img className='w-40'
+            <img className='w-40 hidden sm:block'
               src="https://i.ibb.co.com/VYr9XMZ7/BookLogo.png" alt="Book Logo" />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal font-bold px-1 text-white flex gap-6">
             {links}
           </ul>
         </div>

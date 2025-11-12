@@ -15,7 +15,7 @@ const Home = () => {
             Explore our most popular book categories loved by readers worldwide!
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="hover:-translate-y-4 transition-transform rounded-lg p-4 shadow-md hover:shadow-lg text-center">
+            <div className="hover:-translate-y-4 transition-transform rounded-lg p-4 shadow-md hover:shadow-lg text-center ">
               <img
                 src="https://i.ibb.co.com/LD5s9mw7/0f387215-8a51-4142-adb1-4d05c82a1fc2-sized-1000x1000.jpg"
                 alt="Fiction"

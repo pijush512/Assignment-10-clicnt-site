@@ -42,9 +42,9 @@ const MyBooks = () => {
   return (
     <div className="p-6 w-11/12 mx-auto">
       <Toaster />
-      <h2 className="text-2xl font-bold mb-4">My Books</h2>
+      <h2 className="text-3xl text-center  font-bold mb-6">My Books</h2>
 
-      <table className="table-auto border w-full">
+      <table className="table-auto  border w-full">
         <thead className="bg-gray-300">
           <tr>
             <th className="border border-gray-400 px-4 py-2">Book Name</th>
@@ -63,15 +63,19 @@ const MyBooks = () => {
               <td className="border border-gray-300 px-4 py-2">{book.rating}</td>
               <td className="border border-gray-300 px-4 py-2">
                 <button onClick={() => navigate(`/updateBook/${book._id}`)}
-                  className="btn btn-warning btn-sm mr-2">Update</button>
+                  className="btn btn-primary  mr-2">Update</button>
                 <button onClick={() => handleDelete(book._id)}
-                  className="btn btn-error btn-sm">Delete</button>
+                  className="btn btn-error ">Delete</button>
               </td>
             </tr>
           ))}
         </tbody>
-      </table>
-    </div>
+      </table >
+
+
+
+
+    </div >
   );
 };
 

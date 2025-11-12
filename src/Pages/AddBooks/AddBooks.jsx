@@ -52,7 +52,7 @@ const AddBooks = () => {
 
   return (
     <div className="max-w-xl mx-auto p-6">
-      <h1 className="text-2xl text-center font-bold mb-6">Add a Book</h1>
+      <h1 className="text-3xl text-center font-bold mb-6">Add a Book</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <input className="border rounded-md py-2 px-2" type=" text" name="title" placeholder="Title" value={formData.title} onChange={handleChange} required />
         <input className="border rounded-md py-2 px-2" type="text" name="author" placeholder="Author" value={formData.author} onChange={handleChange} required />
