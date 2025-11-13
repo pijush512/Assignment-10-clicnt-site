@@ -15,7 +15,7 @@ const UpdateBook = () => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:3000/books/${id}`)
+    fetch(`https://assignment-10-server-alpha-one.vercel.app/books/${id}`)
       .then(res => res.json())
       .then(data => setFormData({
         title: data.title,
@@ -33,7 +33,7 @@ const UpdateBook = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`http://localhost:3000/books/${id}`, {
+    fetch(`https://assignment-10-server-alpha-one.vercel.app/books/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData)

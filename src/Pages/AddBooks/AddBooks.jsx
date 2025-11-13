@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../context/AuthContex';
 import toast, { Toaster } from 'react-hot-toast';
 
+
 const AddBooks = () => {
   const { user } = useContext(AuthContext);
   const [formData, setFormData] = useState({
@@ -21,8 +22,7 @@ const AddBooks = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    fetch('http://localhost:3000/books', {
+    fetch('https://assignment-10-server-alpha-one.vercel.app/books', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

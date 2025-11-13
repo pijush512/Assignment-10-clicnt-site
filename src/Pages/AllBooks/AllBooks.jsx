@@ -1,21 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from '../../Components/Spinner/Spinner';
 
 const AllBooks = () => {
   const [books, setBooks] = useState([]);
-
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3000/books')
+    setLoading(true);
+    fetch('https://assignment-10-server-alpha-one.vercel.app/books')
       .then(res => res.json())
       .then(data => {
         setBooks(data);
+        setLoading(false)
       })
       .catch(error => {
         console.log(error);
       })
   }, [])
 
+  if (loading) {
+    return <Spinner></Spinner>
+  }
 
   return (
     <div className="p-6 w-11/12 mx-auto">

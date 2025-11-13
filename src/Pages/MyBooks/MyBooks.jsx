@@ -4,6 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const MyBooks = () => {
   const { user } = useContext(AuthContext);
   const [books, setBooks] = useState([]);
@@ -11,7 +12,7 @@ const MyBooks = () => {
 
   useEffect(() => {
     if (!user?.email) return;
-    fetch(`http://localhost:3000/myBooks/${user.email}`)
+    fetch(`https://assignment-10-server-alpha-one.vercel.app/myBooks/${user.email}`)
       .then(res => res.json())
       .then(data => setBooks(data))
       .catch(error => console.log(error));
@@ -21,7 +22,7 @@ const MyBooks = () => {
   const handleDelete = (id) => {
     const confirmDlete = window.confirm("Are you sure?");
     if (!confirmDlete) return;
-    fetch(`http://localhost:3000/books/${id}`, {
+    fetch(`https://assignment-10-server-alpha-one.vercel.app/books/${id}`, {
       method: "DELETE"
     })
       .then(res => res.json())
@@ -37,7 +38,6 @@ const MyBooks = () => {
       })
 
   }
-
 
   return (
     <div className="p-6 w-11/12 mx-auto">

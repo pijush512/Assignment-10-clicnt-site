@@ -8,7 +8,7 @@ const BookDitals = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/books/${id}`)
+    fetch(`https://assignment-10-server-alpha-one.vercel.app/books/${id}`)
       .then(res => res.json())
       .then(data => {
         setBook(data);
