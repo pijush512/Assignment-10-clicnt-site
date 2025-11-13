@@ -1,6 +1,6 @@
 1. Website-er name: The Book Haven
 
-2. Live site URL: 
+2. Live site URL: https://assignment-10-3a48e.web.app/
 
 3. At least 5 bullet points: 
 
